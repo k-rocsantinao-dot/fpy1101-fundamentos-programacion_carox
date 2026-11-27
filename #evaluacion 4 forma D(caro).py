@@ -104,3 +104,11 @@ def eliminar_empleado(empleados):
         print(f"el empleado '{nombre}' non se encuentra registrado")
 
 
+def actualizar_estado(empleados):
+    for i in range(len(empleados)):
+        if empleados[i]["edad"] >= 18:
+            empleados[i]["activo"] = False
+        else:
+            empleados[i]["activo"] = False
+            
+        
