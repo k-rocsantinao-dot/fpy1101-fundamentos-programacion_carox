@@ -172,3 +172,22 @@ def main():
             break
 
 
+#explicacion
+
+#a lo largo de todo el codigo se usar funciones que validan lo que uno ingresa, como las funciones = validar_nombre, validar_edad...etc..
+#esas funciones revisan un solo dato y retorna true o false dependiendo si cumple o no con las condiciones dentro del bloque
+#en la validacion del nombre se usa el .striip() para limpiar los espacios de mas que estan al principio y al final,si queda vacio retona false
+#las demas funciones como validar_edad y validar salario usan el try except valueerror para que el progrma no colapse si se escriben letras
+
+#la funcion mostrar menu() solo imprime el menu,sin retornar nada mientras que leer opcion pide una opcion para convertirla a entero y poder
+#verificar que lo ingresado este entre el 1 y el 6 antes de retornar
+
+#despues hay mas funciones que tiene que ver con la gestion de los empleados, como agregar ampleado que pide em+l nombre edad y salario, cada una una funcion aparte para la validacion
+#si todo es valido se guarda y se agrega a la lista con append(), sino muestra un mensaje de error y no lo guarda
+
+#la funcion de buscar empleado recorre una lista para hacer la comparacion con lo escrito y con lo que esta guardado, si hay coincidencias se retorna elindice sino retorna -1
+
+
+
+
+#perdon profe no alcanze a explicar mas ahora tengo otra prueba y me tengo que ir 
