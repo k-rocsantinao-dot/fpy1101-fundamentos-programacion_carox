@@ -111,4 +111,19 @@ def actualizar_estado(empleados):
         else:
             empleados[i]["activo"] = False
             
-        
+def mostrar_empleados(empleados):
+    actualizar_estado(empleados)
+    print("=== LISTA DE EMPLEADOS ===")
+
+    for i in range(len(empleados)):
+        emp = empleados[i]
+        if emp["activo"]:
+            estado = "ACTIVO"
+        else:
+            estado = "INACTIVO"
+
+        print("Nombre:", emp["nombre"])
+        print("Edad:", emp["edad"])
+        print("Salario:", emp["salario"])
+        print("Estado:", estado)
+        print("********************************************")
