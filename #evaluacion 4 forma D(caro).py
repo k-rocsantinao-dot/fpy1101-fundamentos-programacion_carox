@@ -79,10 +79,17 @@ def agregar_empleado(empleados):
         "nombre": nombre.strip(),
         "edad": int(edad_texto),
         "salario": float(salario_texto),
-        "activo": false
+        "activo": False
     }  
     
     empleados.append(nuevo_empleado)
     print("empleado agregado!")
     
-    
+#buscar empleado funcion
+
+def buscar_empleado(empleados, nombre_buscado):
+    for i in range(len(empleados)):
+        if empleados[i]["nombre"] == nombre_buscado:
+            return i
+    return - 1
+
