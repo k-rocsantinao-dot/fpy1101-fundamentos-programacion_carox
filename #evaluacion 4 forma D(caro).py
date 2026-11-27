@@ -33,5 +33,26 @@ def validar_salario(texto_salario):
 def mostrar_menu():
     print()
     print("-----------MENU PRINCIPAL---------------------")
-            
-    
+    print("1. agregar empleado")
+    print("2. buscar empleado")
+    print("3. eliminar empleado")
+    print("4. actualizar estado")
+    print("5. mostrar empleados")
+    print("6. salir")
+    print("-----------------------------------------------")
+
+#leer opcion en una funcion aparte    
+def leer_opcion():
+    while True:
+        opcion_texto = input("ingrese una opcion: ").strip()
+        try:
+            opcion = int(opcion_texto)
+            if opcion >= 1 and opcion <= 6:
+                return opcion
+            else:
+                print("de be ingresar un numero entre el 1 y el 6")
+        except ValueError:
+            print("debe ingresar un numero valido")
+        
+
+        
