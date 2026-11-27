@@ -93,3 +93,14 @@ def buscar_empleado(empleados, nombre_buscado):
             return i
     return - 1
 
+def eliminar_empleado(empleados):
+    nombre = input("ingrese nombre del empleado a eliminar: ")
+    posicion = buscar_empleado(empleados, nombre)
+    
+    if posicion != -1:
+        del empleados[posicion]
+        print("empleado eliminado")
+    else:
+        print(f"el empleado '{nombre}' non se encuentra registrado")
+
+
