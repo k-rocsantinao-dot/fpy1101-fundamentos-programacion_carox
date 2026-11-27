@@ -122,8 +122,53 @@ def mostrar_empleados(empleados):
         else:
             estado = "INACTIVO"
 
-        print("Nombre:", emp["nombre"])
-        print("Edad:", emp["edad"])
-        print("Salario:", emp["salario"])
-        print("Estado:", estado)
+        print("nombre:", emp["nombre"])
+        print("edad:", emp["edad"])
+        print("salario:", emp["salario"])
+        print("estado:", estado)
         print("********************************************")
+        
+#programa principal
+
+def main():
+    empleados = []
+    
+    while True:
+        mostrar_menu()
+        opcion = leer_opcion()
+        
+        if opcion == 1:
+            agregar_empleado(empleados)
+            
+        elif opcion == 2:
+            nombre_buscar = input("ingrese nombre a buscar:")
+            pos = buscar_empleado (empleados, nombre_buscar)
+            if pos != -1:
+                emp = empleados[pos]
+                if emp["activo"]:
+                    estado = "ACTIVO"
+                else:
+                    estado = "INACTIVO"
+                print("encintrado en la posicion:", pos)
+                print("nombre:", emp["nombre"])
+                print("edad", emp["edad"])
+                print("Salario:", emp["salario"])
+                print("estado:", estado)
+            else:
+                print("empleado no encontrado")
+                
+        elif opcion == 3:
+            eliminar_empleado(empleados)
+            
+        elif opcion == 4:
+            actualizar_estado(empleados)
+            print("Estados actualizados.")
+
+        elif opcion == 5:
+            mostrar_empleados(empleados)
+
+        elif opcion == 6:
+            print("Gracias por usar el sistema. Vuelva Pronto")
+            break
+
+
