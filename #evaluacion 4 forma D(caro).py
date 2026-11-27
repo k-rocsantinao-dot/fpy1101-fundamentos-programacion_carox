@@ -55,4 +55,34 @@ def leer_opcion():
             print("debe ingresar un numero valido")
         
 
-        
+#funciones para la gestion 
+
+
+def agregar_empleado(empleados):
+    nombre = input("ingrese nombre: ")
+    edad_texto = input("ingrese edad: ")
+    salario_texto = input("ingrese salario: ")
+    
+    #validaciones antes de que se pueda agregar all nuevo empleado
+    if not validar_nombre(nombre):
+        print("error:el nombre no puede estar vacio ni solo espacios ") 
+        return
+    if not validar_edad(edad_texto):
+        print("error:la edad debe ser un num. entero mayor a 0")
+        return
+    if not validar_salario(salario_tezto):
+        print("error: el salario debe ser un numero decimal mayor a cero")  
+        return
+    
+    #agregar empleado nuevo al diccionario
+    nuevo_empleado = {
+        "nombre": nombre.strip(),
+        "edad": int(edad_texto),
+        "salario": float(salario_texto),
+        "activo": false
+    }  
+    
+    empleados.append(nuevo_empleado)
+    print("empleado agregado!")
+    
+    
